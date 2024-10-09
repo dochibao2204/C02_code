@@ -1,0 +1,69 @@
+<div class="w3l-homeblock1 py-5">
+    <div class="container pt-lg-5 pt-md-4">
+        <!-- block -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="section-title-left">Featured posts </h3>
+                <div class="row">
+                    <!-- The first blogs -->
+                    <div class="col-lg-5 col-md-6 item">
+                        {{#if blogs.[0]}}
+                        <div class="card">
+                            <div class="card-header p-0 position-relative">
+                                <a href="/blog/{{blogs.[0].id}}">
+                                    <img class="card-img-bottom d-block radius-image" src="{{blogs.[0].image}}" alt="{{blogs.[0].title}}">
+                                </a>
+                            </div>
+                            <div class="card-body p-0 blog-details">
+                                <a href="/blog/{{blogs.[0].id}}" class="blog-desc">{{blogs.[0].title}}</a>
+                                <p>{{blogs.[0].description}}</p>
+                                <div class="author align-items-center mt-3 mb-1">
+                                    <a href="#author">{{blogs.[0].author}}</a>
+                                </div>
+                                <ul class="blog-meta">
+                                    <li class="meta-item blog-lesson">
+                                        <span class="meta-value">{{blogs.[0].createdDate}}</span>
+                                    </li>
+                                    <li class="meta-item blog-students">
+                                        <span class="meta-value"> 6min read</span>
+                                    </li>
+                                </ul>
+                                <a href="/" class="btn btn-style btn-outline mt-4">All featured posts</a>
+                            </div>
+                        </div>
+                        {{/if}}
+                    </div>
+                    <!-- Other blogs -->
+                    <div class="col-lg-7 col-md-6 mt-md-0 mt-5">
+                        <div class="list-view list-view1">
+                            {{#each blogs as |blog|}}
+                                {{#if @index}}
+                                <div class="grids5-info mt-5">
+                                    <a href="/blog/{{blog.id}}" class="d-block zoom">
+                                        <img src="{{blog.image}}" alt="{{blog.title}}" class="img-fluid radius-image news-image">
+                                    </a>
+                                    <div class="blog-info align-self">
+                                        <a href="/blog/{{blog.id}}" class="blog-desc1">{{blog.title}}</a>
+                                        <div class="author align-items-center mt-3 mb-1">
+                                            <a href="#author">{{blog.author}}</a>
+                                        </div>
+                                        <ul class="blog-meta">
+                                            <li class="meta-item blog-lesson">
+                                                <span class="meta-value">{{blog.createdDate}}</span>
+                                            </li>
+                                            <li class="meta-item blog-students">
+                                                <span class="meta-value">6min read</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                {{/if}}
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //block -->
+    </div>
+</div>

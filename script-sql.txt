@@ -1,0 +1,29 @@
+CREATE DATABASE economic;
+
+USE economic;
+CREATE TABLE products(
+	id int PRIMARY KEY AUTO_INCREMENT,
+	name varchar(250),
+	description varchar(250),
+	price double,
+	image varchar(250),
+	createdDate datetime
+);
+
+INSERT INTO products (name, description, price, image, createdDate) 
+VALUES 
+	('Smartphone', 'Latest model with high-end specs', 699.99, 'smartphone.jpg', NOW()),
+	('Laptop', 'Powerful laptop for gaming and work', 1299.99, 'laptop.jpg', NOW()),
+	('Headphones', 'Noise-cancelling wireless headphones', 199.99, 'headphones.jpg', NOW()),
+	('Smartwatch', 'Water-resistant smartwatch with GPS', 299.99, 'smartwatch.jpg', NOW()),
+	('Camera', 'Digital camera with 4K video recording', 549.99, 'camera.jpg', NOW()),
+	('Tablet', '10-inch tablet with high-resolution display', 399.99, 'tablet.jpg', NOW()),
+	('Gaming Console', 'Next-gen gaming console with 4K support', 499.99, 'console.jpg', NOW()),
+	('Bluetooth Speaker', 'Portable Bluetooth speaker with deep bass', 99.99, 'speaker.jpg', NOW()),
+	('Fitness Tracker', 'Wearable fitness tracker with heart rate monitor', 149.99, 'tracker.jpg', NOW()),
+	('Drone', 'Compact drone with 4K camera and GPS', 799.99, 'drone.jpg', NOW()),
+	('Wireless Mouse', 'Ergonomic wireless mouse with long battery life', 49.99, 'mouse.jpg', NOW()),
+	('Mechanical Keyboard', 'RGB mechanical keyboard with customizable keys', 129.99, 'keyboard.jpg', NOW()),
+	('4K Monitor', '32-inch 4K monitor with HDR support', 349.99, 'monitor.jpg', NOW()),
+	('External SSD', '1TB external SSD with fast data transfer', 189.99, 'ssd.jpg', NOW()),
+	('Electric Scooter', 'Foldable electric scooter with long-range battery', 899.99, 'scooter.jpg', NOW());
